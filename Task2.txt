@@ -1,0 +1,204 @@
+Task 2::
+///question1
+
+> db.Pet_Shop.insertMany(
+... [
+...     {
+...         pet:"Dog",
+...         kind:"Labrador",
+...         age_in_months:2,
+...         color:"golden brown",
+...         fur:true,
+...         pattern:false,
+...         gender:"female",
+...         history:"no history"
+...     },
+...     {
+...         pet:"Dog",
+...         kind:"Poodle",
+...         age_in_months:3,
+...         color:"black",
+...         fur:true,
+...         pattern:false,
+...         gender:"male",
+...         history:"tendency to chew"
+...     },
+...     {
+...         pet:"Dog",
+...         kind:"Dalmation",
+...         age_in_months:0.2,
+...         color:"Black and white",
+...         fur:false,
+...         pattern:true,
+...         gender:"male",
+...         history:"no history"
+...     },
+...     {
+...         pet:"Cat",
+...         kind:"Sphynx",
+...         age_in_months:2,
+...         color:"white and gray",
+...         fur:false,
+...         pattern:true,
+...         gender:"female",
+...         history:"tendency to scratch"
+...     },
+...     {
+...         pet:"Cat",
+...         kind:"Ragdoll",
+...         age_in_months:2,
+...         color:"white and darkbrown",
+...         fur:true,
+...         pattern:true,
+...         gender:"male",
+...         history:"no history"
+...     },
+...     {
+...         pet:"Hamster",
+...         kind:"Syrian",
+...         age_in_months:0.3,
+...         color:"beige",
+...         fur:true,
+...         pattern:true,
+...         gender:"male",
+...         history:"no history"
+...     },
+...     {
+...         pet:"Parrot",
+...         kind:"Cockatoo",
+...         age_in_months:0.1,
+...         color:"Pink and gray",
+...         fur:true,
+...         pattern:true,
+...         gender:"female",
+...         history:"no history"
+...     },
+...     {
+...         pet:"Parrot",
+...         kind:"True Parrot",
+...         age_in_months:0.1,
+...         color:"Blue and orange",
+...         fur:true,
+...         pattern:false,
+...         gender:"male",
+...         history:"no history"
+...     },
+...     {
+...         pet:"Fish",
+...         kind:"Neon Teras",
+...         age_in_months:0.2,
+...         color:"Blue and bright colors",
+...         fur:false,
+...         pattern:true,
+...         gender:"female",
+...         history:"no history"
+...     },
+...     {
+...         pet:"Fish",
+...         kind:"Guppies",
+...         age_in_months:2,
+...         color:"golden orange and black",
+...         fur:false,
+...         pattern:true,
+...         gender:"male",
+...         history:"no history"
+...     },
+...     {
+...         pet:"Fish",
+...         kind:"Angel Fish",
+...         age_in_months:0.2,
+...         color:"silver",
+...         fur:false,
+...         pattern:true,
+...         gender:"male",
+...         history:"no history"
+...     }
+... ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5fb6544c93d428bf1d8e4000"),
+                ObjectId("5fb6544c93d428bf1d8e4001"),
+                ObjectId("5fb6544c93d428bf1d8e4002"),
+                ObjectId("5fb6544c93d428bf1d8e4003"),
+                ObjectId("5fb6544c93d428bf1d8e4004"),
+                ObjectId("5fb6544c93d428bf1d8e4005"),
+                ObjectId("5fb6544c93d428bf1d8e4006"),
+                ObjectId("5fb6544c93d428bf1d8e4007"),
+                ObjectId("5fb6544c93d428bf1d8e4008"),
+                ObjectId("5fb6544c93d428bf1d8e4009"),
+                ObjectId("5fb6544c93d428bf1d8e400a")
+        ]
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+///question2
+
+> db.Availability_Check.insertOne(
+... {
+...     pet:"Fish",
+...     kind:"Guppies",
+...     color:"golden orange and black"
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5fb67fcd93d428bf1d8e400b")
+}
+> db.Availability_Check.insertOne(
+... {
+...     pet:"Fish",
+...     kind:"GoldFish",
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5fb67ff893d428bf1d8e400c")
+}
+> db.Availability_Check.insertOne(
+... {
+...     pet:"Hamster",
+...     kind:"Syrian",
+...     color:"white",
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5fb6802593d428bf1d8e400d")
+}
+> db.Availability_Check.insertOne(
+... {
+...         pet:"Dog",
+...         kind:"Labrador",
+...         color:"golden brown"
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5fb6805593d428bf1d8e400e")
+}
+> db.Availability_Check.find().pretty()
+{
+        "_id" : ObjectId("5fb67fcd93d428bf1d8e400b"),
+        "pet" : "Fish",
+        "kind" : "Guppies",
+        "color" : "golden orange and black"
+}
+{
+        "_id" : ObjectId("5fb67ff893d428bf1d8e400c"),
+        "pet" : "Fish",
+        "kind" : "GoldFish"
+}
+{
+        "_id" : ObjectId("5fb6802593d428bf1d8e400d"),
+        "pet" : "Hamster",
+        "kind" : "Syrian",
+        "color" : "white"
+}
+{
+        "_id" : ObjectId("5fb6805593d428bf1d8e400e"),
+        "pet" : "Dog",
+        "kind" : "Labrador",
+        "color" : "golden brown"
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
